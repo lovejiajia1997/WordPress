@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+        <project name="antProperty" default="printPro" basedir=".">  
+        <property name="name" value="Kevin"/>  
+        <property name="age" value="25"/>  
+        <target name="printPro">  
+            <echo message="The current ant version is:${ant.version}"/>  
+                <echo message="name: ${name}, age: ${age}"/>  
+        </target>  
+    </project>

@@ -1,0 +1,63 @@
+package com.webtest.demo;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+
+/** 
+* author:shenmengqi 
+* @version 创建时间：2018年11月23日 上午10:08:50 
+* 类说明 
+*/
+
+public class screenshotdemo {
+	@Test
+	public void careInterfaceSmoke(){
+	    Assert.assertEquals(1,2);
+	}
+
+	@AfterMethod(alwaysRun = true)
+	public void afterMethod(ITestResult result) throws Exception {
+	    if (!result.isSuccess())
+	        catchExceptions(result);
+	}
+
+	public void catchExceptions(ITestResult result) {
+	    System.out.println("result" + result);
+	    String methodName = result.getName();
+	    System.out.println(methodName);
+	    if (!result.isSuccess()) {
+	        File file = new File("");
+	        Reporter.setCurrentTestResult(result);
+	        System.out.println(file.getAbsolutePath());
+	        Reporter.log(file.getAbsolutePath());
+	        String filePath = file.getAbsolutePath();
+	        filePath  = filePath.replace("/opt/apache-tomcat-7.0.64/webapps","http://172.18.44.114:8080");
+	        Reporter.log("<img src='"+filePath+"/"+result.getName()+".jpg' hight='100' width='100'/>");
+	        int width = 100;
+	        int height = 100;
+	        String s = "这是一张测试图片";
+	        File screenShotFile = new File(file.getAbsolutePath()+"/"+result.getName()+".jpg");
+
+	        Font font = new Font("Serif", Font.BOLD, 10);
+	        BufferedImage bi = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+	        Graphics2D g2 = (Graphics2D)bi.getGraphics();
+	        g2.setBackground(Color.BLACK);
+	        g2.clearRect(0, 0, width, height);
+	        g2.setPaint(Color.RED);
+
+	        FontRenderContext context = g2.getFontRenderContext();
+	        Rectangle2D bounds = font.getStringBounds(s, context);
+	        double x = (width - bounds.getWidth()) / 2;
+	        double y = (height - bounds.getHeight()) / 2;
+	        double ascent = -bounds.getY();
+	        double baseY = y + ascent;
+
+	        g2.drawString(s, (int)x, (int)baseY);
+
+	        try {
+	            ImageIO.write(bi, "jpg", screenShotFile);
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+
+}

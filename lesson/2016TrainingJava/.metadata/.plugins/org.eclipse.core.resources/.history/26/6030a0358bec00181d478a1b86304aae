@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="TestNG" default="sendEmail" basedir=".">
+
+    <property name="srcdir" location="${basedir}/src" />
+    <property name="libdir" location="${basedir}/lib" />
+    <property name="testng.output.dir" location="${basedir}/test-output" />
+    <property name="testng.file" value="testng.xml" />
+    <property name="report" value="D:\2016TrainingJava\auto2018\test-output\html\index.html" />
+    <property name="anthome" location="F:\apache-ant-1.10.5\lib" />
+
+    <path id="classpath">
+        <fileset dir="${libdir}" includes="*jar" />
+        <fileset dir="${libdir}" includes="*zip" />
+        <pathelement location="${basedir}/bin" />
+    </path>
+
+    <!-- Define <testng> task -->
+    <taskdef name="testng" classname="org.testng.TestNGAntTask">
+        <classpath>
+            <pathelement location="./lib/testng-6.8.5.jar" />
+        </classpath>
+    </taskdef>
+
+    <!-- Before compile,delete the previous folder -->
+    <target name="clean">
+        <delete dir="${basedir}/bin" />
+    </target>
+
+    <!-- Compile file in 'srcdir' to 'destdir' -->
+    <target name="compile" depends="clean">
+        <mkdir dir="${basedir}/bin" />
+        <javac srcdir="${srcdir}" encoding="UTF-8" destdir="${basedir}/bin" classpathref="classpath" includeantruntime="off" debug="on" debuglevel="lines,vars,source" />
+    </target>
+
+    <!-- use testng.xml to run the test -->
+    <target name="runtest" depends="compile">
+        <testng outputdir="${testng.output.dir}" classpathref="classpath">
+            <xmlfileset dir="${basedir}" includes="${testng.file}" />
+        </testng>
+    </target>
+
+    <!-- change to your mail address -->
+    <path id="lib_classpath">
+        <fileset dir="${anthome}">
+            <include name="mail*.jar" />
+            <include name="activation*.jar" />
+            <include name="commons-email*.jar" />
+            <include name="ant-contrib*.jar" />
+        </fileset>
+    </path>
+    <target name="sendEmail" depends="runtest">
+        <mail mailhost="smtp.XXXX.com" mailport="25" user="XXXX" password="XXXXX" ssl="false" from="g1@XX.com" subject="UI自动化冒烟测试报告" messageMimeType="text/html" tolist="g1@XX.com,g2@XX.com">
+            <fileset dir="${testng.output.dir}">
+                <include name="emailable-report.html" />
+            </fileset>
+            <message charset="gb2312">
+                <![CDATA[
+                          <p>
+                            UI自动化冒烟测试报告
+                          </p>
+            <pre>
+                <a href= "${report}">暂时未开通此功能！</a>
+            </pre>
+            <p>落款</p>
+                          ]]>
+                    </message>
+    </mail>
+</target>
+
+</project>

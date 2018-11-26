@@ -1,0 +1,43 @@
+[INFO ] 2018-11-19 16:40:20,252 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-19 16:40:20,309 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-19 16:40:23,810 com.webtest.utils.Log - Opened url http://localhost:8032/MyMovie/admin.php/Login/index.html
+[INFO ] 2018-11-19 16:40:23,810 com.webtest.utils.Log - Opened url ERROR
+[INFO ] 2018-11-19 16:40:24,819 com.webtest.utils.Log - Quitted Browser
+[INFO ] 2018-11-20 14:16:16,038 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-20 14:16:16,117 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-20 14:16:19,367 com.webtest.utils.Log - Opened url http://localhost:8032/MyMoviehttp://localhost:8032/mymovie/
+[INFO ] 2018-11-20 14:16:19,367 com.webtest.utils.Log - Opened url ERROR
+[INFO ] 2018-11-20 14:16:19,468 com.webtest.utils.Log - org.openqa.selenium.NoSuchElementException: Unable to locate element: 登录
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T16:15:40.131Z'
+System info: host: 'WHATQ', ip: '169.254.144.88', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\60132\AppData\Local\Temp\rust_mozprofile.h8A21xSbkQII, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=true, browserVersion=56.0, platformVersion=10.0, moz:processID=5680, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: 1e4b8100-233e-4049-bcf0-c5a61ace00d1
+*** Element info: {Using=link text, value=登录}
+[INFO ] 2018-11-20 14:16:19,482 com.webtest.utils.Log - org.openqa.selenium.NoSuchElementException: Unable to locate element: *[name='username']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T16:15:40.131Z'
+System info: host: 'WHATQ', ip: '169.254.144.88', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\60132\AppData\Local\Temp\rust_mozprofile.h8A21xSbkQII, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=true, browserVersion=56.0, platformVersion=10.0, moz:processID=5680, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: 1e4b8100-233e-4049-bcf0-c5a61ace00d1
+*** Element info: {Using=name, value=username}
+[INFO ] 2018-11-20 14:16:19,495 com.webtest.utils.Log - org.openqa.selenium.NoSuchElementException: Unable to locate element: *[name='password']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T16:15:40.131Z'
+System info: host: 'WHATQ', ip: '169.254.144.88', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\60132\AppData\Local\Temp\rust_mozprofile.h8A21xSbkQII, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=true, browserVersion=56.0, platformVersion=10.0, moz:processID=5680, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: 1e4b8100-233e-4049-bcf0-c5a61ace00d1
+*** Element info: {Using=name, value=password}
+[INFO ] 2018-11-20 14:16:19,508 com.webtest.utils.Log - org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@value='马上登录']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T16:15:40.131Z'
+System info: host: 'WHATQ', ip: '169.254.144.88', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\60132\AppData\Local\Temp\rust_mozprofile.h8A21xSbkQII, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=true, browserVersion=56.0, platformVersion=10.0, moz:processID=5680, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: 1e4b8100-233e-4049-bcf0-c5a61ace00d1
+*** Element info: {Using=xpath, value=//input[@value='马上登录']}
+[ERROR] 2018-11-20 14:16:19,534 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@5c072e3f-testLogin运行失败，需要截屏
+[INFO ] 2018-11-20 14:16:20,312 com.webtest.utils.Log - Quitted Browser
