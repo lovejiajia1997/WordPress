@@ -1,8 +1,0 @@
-*.iws
-.DS_Store
-build
-dist
-docs
-website
-release
-temp
