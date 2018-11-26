@@ -1,0 +1,2 @@
+title	petname	director	editor	nation	language	picname	editmode
+寻梦环游记	coco	李·昂克里奇	阿德里安.莫利纳	美国	英语	D:\\Program Files\\Java\\eclipse\\text\\Test\\src\\demo1009\\timg.jpg	《寻梦环游记》是皮克斯动画工作室的第19部动画长片.该片的灵感源于墨西哥亡灵节，讲述了热爱音乐的小男孩米格和落魄乐手埃克托在五彩斑斓的神秘世界开启了一段奇妙冒险旅程的故事。

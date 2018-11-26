@@ -1,0 +1,195 @@
+[ERROR] 2018-11-14 17:12:00,982 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@6440112d-testLogin运行失败，需要截屏
+[ERROR] 2018-11-16 11:22:11,605 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@6440112d-testLogin运行失败，需要截屏
+[INFO ] 2018-11-20 15:08:38,882 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-20 15:08:39,033 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-20 15:09:00,355 com.webtest.utils.Log - Opened url http://localhost:8032/MyMovie/admin.php/Login/index.html
+[INFO ] 2018-11-20 15:23:34,294 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-20 15:23:34,390 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-20 15:23:38,590 com.webtest.utils.Log - Opened url http://localhost:8032/MyMovie/admin.php/Login/index.html
+[INFO ] 2018-11-20 15:42:19,844 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-20 15:42:19,916 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-20 15:42:43,135 com.webtest.utils.Log - Opened url http://localhost:8032/MyMovie/admin.php/Login/index.html
+[INFO ] 2018-11-21 17:01:49,540 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-21 17:01:49,610 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-21 17:02:12,141 com.webtest.utils.Log - Opened url http://localhost:8032/MyMovie/admin.php/Login/index.html
+[INFO ] 2018-11-21 17:12:54,858 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-21 17:12:54,933 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-21 17:12:59,892 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[INFO ] 2018-11-21 17:13:31,395 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-21 17:13:31,524 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-21 17:13:36,228 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-21 17:13:43,424 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@221a3fa4-testLogin运行失败，需要截屏
+[INFO ] 2018-11-21 17:16:57,011 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-21 17:16:57,168 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-21 17:17:19,025 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-21 17:17:25,976 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@221a3fa4-testLogin运行失败，需要截屏
+[INFO ] 2018-11-21 17:32:36,760 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-21 17:32:36,816 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-21 17:32:59,983 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-21 17:33:06,754 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@221a3fa4-testLogin运行失败，需要截屏
+[INFO ] 2018-11-21 17:37:36,142 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-21 17:37:36,280 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-21 17:37:40,728 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-21 17:37:47,568 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@231f98ef-testLogin运行失败，需要截屏
+[INFO ] 2018-11-21 17:41:46,878 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-21 17:41:47,074 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-21 17:41:51,710 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-21 17:41:58,853 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@231f98ef-testLogin运行失败，需要截屏
+[INFO ] 2018-11-21 17:50:41,117 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-21 17:50:41,893 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-21 17:50:47,563 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-21 17:50:54,933 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@183ec003-testLogin运行失败，需要截屏
+[INFO ] 2018-11-21 17:51:47,008 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-21 17:51:47,069 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-21 17:51:51,158 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-21 17:51:58,335 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@183ec003-testLogin运行失败，需要截屏
+[INFO ] 2018-11-21 17:52:40,029 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-21 17:52:40,102 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-21 17:52:44,307 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-21 17:52:51,466 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@183ec003-testLogin运行失败，需要截屏
+[ERROR] 2018-11-21 17:52:51,490 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@183ec003-testLogin运行失败，需要截屏
+[INFO ] 2018-11-21 17:53:41,901 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-21 17:53:41,979 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-21 17:53:47,748 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-21 17:53:54,903 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@183ec003-testLogin运行失败，需要截屏
+[ERROR] 2018-11-21 17:53:54,930 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@183ec003-testLogin运行失败，需要截屏
+[INFO ] 2018-11-21 17:54:46,941 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-21 17:54:47,011 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-21 17:54:51,139 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-21 17:54:58,632 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@183ec003-testLogin运行失败，需要截屏
+[ERROR] 2018-11-21 17:54:58,659 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@183ec003-testLogin运行失败，需要截屏
+[INFO ] 2018-11-21 17:55:54,564 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-21 17:55:54,624 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-21 17:56:00,441 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-21 17:56:07,606 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@183ec003-testLogin运行失败，需要截屏
+[INFO ] 2018-11-21 18:09:44,963 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-21 18:09:45,020 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-21 18:09:49,384 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-21 18:09:49,446 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-21 18:10:09,766 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[INFO ] 2018-11-21 18:10:12,962 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-21 18:10:17,026 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@183ec003-testLogin运行失败，需要截屏
+[ERROR] 2018-11-21 18:10:20,072 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@183ec003-testLogin运行失败，需要截屏
+[INFO ] 2018-11-23 08:44:22,895 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-23 08:44:22,962 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-23 08:44:46,372 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-23 08:44:53,470 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@183ec003-testLogin运行失败，需要截屏
+[INFO ] 2018-11-23 08:45:08,577 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-23 08:45:08,659 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-23 08:45:12,885 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-23 08:45:20,088 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@183ec003-testLogin运行失败，需要截屏
+[ERROR] 2018-11-23 08:45:20,375 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@183ec003-testLogin运行失败，需要截屏
+[INFO ] 2018-11-23 08:51:22,144 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-23 08:51:22,213 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-23 08:51:26,522 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-23 08:51:33,699 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@183ec003-testLogin运行失败，需要截屏
+[ERROR] 2018-11-23 08:51:33,721 com.webtest.utils.Log - com.webtest.demo.Front_Login_Test@183ec003-testLogin运行失败，需要截屏
+[INFO ] 2018-11-23 08:53:37,025 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-23 08:53:37,135 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-23 08:53:41,276 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-23 08:53:48,570 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[ERROR] 2018-11-23 08:53:48,602 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[INFO ] 2018-11-23 08:59:39,410 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-23 08:59:39,502 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-23 09:00:02,708 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-23 09:00:09,659 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[INFO ] 2018-11-23 09:02:42,111 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-23 09:02:42,187 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-23 09:02:46,667 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[INFO ] 2018-11-23 09:02:54,244 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行成功，发送邮件
+[INFO ] 2018-11-23 09:48:23,462 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-23 09:48:23,526 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-23 09:48:46,368 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-23 09:48:53,349 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[INFO ] 2018-11-23 09:55:31,069 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-23 09:55:31,168 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-23 09:55:35,515 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-23 09:55:42,376 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[INFO ] 2018-11-23 10:03:31,821 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-23 10:03:31,906 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-23 10:03:55,567 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-23 10:04:02,939 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[INFO ] 2018-11-23 10:40:15,405 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-23 10:40:15,499 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-23 10:40:38,870 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-23 10:40:45,712 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[INFO ] 2018-11-23 10:42:25,183 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-23 10:42:25,258 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-23 10:42:29,598 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-23 10:42:36,732 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[INFO ] 2018-11-23 10:45:43,599 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-23 10:45:43,732 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-23 10:45:48,801 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-23 10:45:56,279 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[INFO ] 2018-11-23 10:46:49,806 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-23 10:46:49,888 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-23 10:46:54,498 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[INFO ] 2018-11-23 10:47:02,554 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行成功，发送邮件
+[ERROR] 2018-11-23 10:47:22,497 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[INFO ] 2018-11-23 10:49:14,444 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-23 10:49:14,720 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-23 10:49:20,445 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[INFO ] 2018-11-23 10:49:28,789 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行成功，发送邮件
+[ERROR] 2018-11-23 10:49:47,843 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[INFO ] 2018-11-23 10:56:11,902 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-23 10:56:12,031 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-23 10:56:32,442 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[INFO ] 2018-11-23 10:56:40,230 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行成功，发送邮件
+[ERROR] 2018-11-23 10:56:59,210 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[INFO ] 2018-11-23 11:12:03,967 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-23 11:12:04,042 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-23 11:12:27,219 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[INFO ] 2018-11-23 11:12:34,483 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行成功，发送邮件
+[INFO ] 2018-11-26 17:37:13,454 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-26 17:37:13,575 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-26 17:37:37,444 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[INFO ] 2018-11-26 17:37:44,879 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行成功，发送邮件
+[INFO ] 2018-11-26 17:38:04,768 com.webtest.utils.Log - test发送邮件
+[INFO ] 2018-11-26 17:42:36,391 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-26 17:42:36,568 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-26 17:42:40,999 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-26 17:42:48,441 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[INFO ] 2018-11-26 17:42:48,673 com.webtest.utils.Log - test发送邮件
+[INFO ] 2018-11-26 17:46:44,262 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-26 17:46:44,333 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-26 17:46:48,861 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-26 17:46:55,943 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[INFO ] 2018-11-26 17:46:56,139 com.webtest.utils.Log - test发送邮件
+[INFO ] 2018-11-26 17:57:05,333 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-26 17:57:05,477 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-26 17:57:09,926 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[INFO ] 2018-11-26 18:00:57,592 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-26 18:00:57,716 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-26 18:01:02,312 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-26 18:01:09,769 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[INFO ] 2018-11-26 18:01:10,299 com.webtest.utils.Log - test发送邮件
+[INFO ] 2018-11-26 18:04:14,655 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-26 18:04:14,806 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-26 18:04:19,534 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-26 18:04:26,812 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[INFO ] 2018-11-26 18:04:27,061 com.webtest.utils.Log - test发送邮件
+[INFO ] 2018-11-26 18:07:07,405 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-26 18:07:07,566 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-26 18:07:12,277 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-26 18:07:19,621 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[INFO ] 2018-11-26 18:07:19,904 com.webtest.utils.Log - test发送邮件
+[INFO ] 2018-11-26 18:10:04,386 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-26 18:10:04,474 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-26 18:10:27,603 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-26 18:10:34,376 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[INFO ] 2018-11-26 18:10:34,569 com.webtest.utils.Log - test发送邮件
+[INFO ] 2018-11-26 18:12:38,207 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-26 18:12:38,273 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-26 18:12:44,290 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-26 18:12:51,248 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[INFO ] 2018-11-26 18:12:51,464 com.webtest.utils.Log - test发送邮件
+[INFO ] 2018-11-26 18:15:08,425 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-26 18:15:08,496 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-26 18:15:12,784 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-26 18:15:19,844 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[INFO ] 2018-11-26 18:15:20,036 com.webtest.utils.Log - test发送邮件
+[INFO ] 2018-11-26 18:19:36,207 com.webtest.utils.Log - Using Firefox
+[INFO ] 2018-11-26 18:19:36,299 com.webtest.utils.Log - firefox
+[INFO ] 2018-11-26 18:19:40,701 com.webtest.utils.Log - Opened url http://localhost:8032/mymovie/
+[ERROR] 2018-11-26 18:19:47,981 com.webtest.utils.Log - com.webtest.demo.Front_Login1@31ea9581-testSearch运行失败，需要截屏
+[INFO ] 2018-11-26 18:19:48,208 com.webtest.utils.Log - test发送邮件
