@@ -48,4 +48,5 @@ public class AddUser_Test extends BaseTest{
 		Thread.sleep(1000);	
 		System.out.println("添加用户成功");
 	}
+	
 }
