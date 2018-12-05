@@ -1,4 +1,4 @@
-package shiusjia;
+package shisujia;
 
 public class Demo {
 	public static void main(String[] args) {
