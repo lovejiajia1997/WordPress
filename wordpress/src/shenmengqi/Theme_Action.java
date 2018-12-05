@@ -19,112 +19,66 @@ public class Theme_Action {
 	public void changeTheme(String name) {
 		this.theme();
 		
-		if(webtest.isElementPresent("xpath=//h2[@id='"+name+"-name']")) {
-			webtest.click("xpath=//h2[@id='"+name+"-name']");
-			if(webtest.isElementPresent("xpath=//a[@aria-label='激活"+name+"']")) {
-				webtest.click("xpath=//a[@aria-label='激活"+name+"']");
-				int i = 0;
-				while(i<5 && !webtest.isTextPresent("已激活")) {
-					webtest.pause(1000);
-					i++;
-				}
-			}else {
-				Log.error("主题正在应用");
-			}
-		}else {
+		if(webtest.isElementPresent("xpath=//h2[contains(.,'"+name+"')]")) {
+			webtest.click("xpath=//h2[contains(.,'"+name+"')]");
 			
+			webtest.click("xpath=//a[@aria-label='激活Twenty Thirteen']");
+
+		}else {
 			Log.error(name+"主题元素不存在");
 		}
 	}
 	
 	
 	//添加主题
-	//搜索主题并安装
+	//搜索主题并添加
 	public void addThemeBySearch(String name) {
-		String installpath = "xpath=//a[@data-slug='"+name+"']";//安装按钮元素位置
-		String usepath = "xapth=//a[@aria-label='激活"+name+"']";//启用按钮元素位置
-		
 		this.theme();
 		webtest.click("xpath=//a[@class='hide-if-no-js page-title-action']");
 		webtest.typeAndClear("id=wp-filter-search-input",name);
 		
-		
 		webtest.click("xpath=//h3[contains(.,'"+name+"')]");
 		
-//		鼠标悬停
-//		webtest.mouseoverElement("xpath=//h3[contains(.,'"+name+"')]");
+		webtest.click("xpath=//a[contains(.,'安装')]");
 		
-		//判断主题元素是否存在
-		if (webtest.isElementPresent(installpath)) {
-			int i  = 0;
-			webtest.click(installpath);
-			while(!webtest.isElementPresent(usepath) && i<20) {
-				webtest.pause(1000);
-				i++;
-			}
-		}//判断主题是否已安装
-		else if(webtest.isElementPresent(usepath)) {
-			Log.info("主题已安装");
+		int i=0;
+		while(i<2 && webtest.ifNotContains("正在安装")) {
+			webtest.pause(5000);
+			i++;
 		}
-		else {
-			Log.error("主题元素未找到");
-		}
-		
 		
 	}
 	//通过链接安装主题
 	public void addThemeByLink(String name) {
-		String installpath = "xpath=//a[@data-slug='"+name+"']";//安装按钮元素位置
-		String usepath = "xapth=//a[@aria-label='激活"+name+"']";//启用按钮元素位置
 		
 		this.theme();
 		
 		webtest.click("xpath=//a[contains(.,'添加新主题')]");
-		webtest.click(installpath);
-		
 		webtest.click("xpath=//h3[contains(.,'"+name+"')]");
 		
-		if (webtest.isElementPresent(installpath)) {
-			int i  = 0;
-			webtest.click(installpath);
-			while(!webtest.isElementPresent(usepath) && i<4) {
-				webtest.pause(5000);
-				i++;
-			}
-		}
-		else if(webtest.isElementPresent(usepath)) {
-			Log.info("主题已安装");
-		}
-		else {
-			Log.error("主题元素未找到");
+		webtest.click("xpath=//a[contains(.,'安装')]");
+		
+		int i=0;
+		while(i<2 && webtest.ifNotContains("正在安装")) {
+			webtest.pause(5000);
+			i++;
 		}
 	}
 	//通过按钮安装主题
 	public void addThemeByButton(String name) {
 		
-		String installpath = "xpath=//a[@data-slug='"+name+"']";//安装按钮元素位置
-		String usepath = "xapth=//a[@aria-label='激活"+name+"']";//启用按钮元素位置
 		
 		this.theme();
 		
 		webtest.click("xpath=//a[@class='hide-if-no-js page-title-action']");
-		webtest.click(installpath);
-		
 		webtest.click("xpath=//h3[contains(.,'"+name+"')]");
 		
-		if (webtest.isElementPresent(installpath)) {
-			int i  = 0;
-			webtest.click(installpath);
-			while(!webtest.isElementPresent(usepath) && i<20) {
-				webtest.pause(1000);
-				i++;
-			}
-		}
-		else if(webtest.isElementPresent(usepath)) {
-			Log.info("主题已安装");
-		}
-		else {
-			Log.error("主题元素未找到");
+		webtest.click("xpath=//a[contains(.,'安装')]");
+		
+		int i=0;
+		while(i<2 && webtest.ifNotContains("正在安装")) {
+			webtest.pause(5000);
+			i++;
 		}
 	}
 

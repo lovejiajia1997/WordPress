@@ -1,12 +1,13 @@
 package com.wordpress.test;
 
+import static org.testng.Assert.assertTrue;
+
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.wordpress.appModules.LittleTools_Action;
 import com.wordpress.appModules.Theme_Action;
 import com.wordpress.core.BaseTest;
-import com.wordpress.core.Checker;
 
 /** 
 * author:shenmengqi 
@@ -16,7 +17,6 @@ import com.wordpress.core.Checker;
 
 public class LittleTools_Test extends BaseTest{
 	LittleTools_Action tools;
-	Checker checker;
 	
 	@BeforeMethod
 	public void setup() {
@@ -26,19 +26,19 @@ public class LittleTools_Test extends BaseTest{
 	@Test(priority=0)
 	public void addTools() {
 		tools.addTools();
-		checker.isPresent("修改已保存");
+		assertTrue(webtest.ifContains("修改已保存"));
 		
 	}
 	
 	@Test (priority=1)
 	public void editTools() {
 		tools.editTools("www.123.com","8");
-		checker.isPresent("修改已保存");
+		assertTrue(webtest.ifContains("修改已保存"));
 	}
 	
 	@Test(priority=2)
 	public void delTools() {
 		tools.delTools();
-		checker.isPresent("修改已保存");
+		assertTrue(webtest.ifContains("修改已保存"));
 	}
 }
