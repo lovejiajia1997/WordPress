@@ -1,12 +1,12 @@
-package com.wordpress.test;
+package shenmengqi;
 
 import static org.testng.Assert.assertTrue;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.wordpress.appModules.Menus_Action;
-import com.wordpress.core.BaseTest;
+import com.webtest.core.BaseTest;
+
 
 /** 
 * author:shenmengqi 
@@ -38,13 +38,10 @@ public class Menus_Test extends BaseTest{
 	@Test(priority=3)
 	public void delMenus() {
 		menus.delMenus("测试菜单1");
-		assertTrue(webtest.ifContains("成功删除"));
+		
+		assertTrue(webtest.ifContains("菜单已被成功删除"));
 		
 	}
-	
-	
-	
-	
 	
 	
 	Menus_Action menus;

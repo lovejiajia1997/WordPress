@@ -1,7 +1,7 @@
-package com.wordpress.appModules;
+package shenmengqi;
 
+import com.webtest.core.WebDriverEngine;
 import com.webtest.utils.Log;
-import com.wordpress.core.WebDriverEngine;
 
 /** 
 * author:shenmengqi 
@@ -115,7 +115,7 @@ public class Theme_Action {
 	public void login() {
 		webtest.open("/wp-login.php");
 		webtest.typeAndClear("id=user_login", "admin");
-		webtest.typeAndClear("id=user_pass", "VJH$zxPNT3%enjVfHX");
+		webtest.typeAndClear("id=user_pass", "admin");
 		webtest.click("id=wp-submit");
 	}
 	

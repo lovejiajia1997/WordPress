@@ -3,7 +3,6 @@ package ludanqi123;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -28,10 +27,10 @@ Login_Action action;
 	}
 
 	@Test
-	public void testLogin() throws Exception  {		
+	public void modifyArticle() throws Exception  {		
 		//登录
 		webtest.open("http://localhost:8032/wordpress/wp-login.php");
-		action.login("ludanqi", "970901");
+		action.login("admin", "admin");
 		Thread.sleep(1000);
 		//移动语句只能使用driver
 		Actions actions = new Actions(driver);
@@ -42,17 +41,12 @@ Login_Action action;
 		Thread.sleep(1000);	
 		//点击题目上的回收站
 		actions.moveToElement(driver.findElement(By.xpath("//a[contains(.,'冬日告白')]"))).perform();
-		webtest.click("xpath=//a[@aria-label='编辑“测试标题”']");
+		driver.findElement(By.xpath("//a[@aria-label='编辑“冬日告白”']")).click();
 		Thread.sleep(1000);	
-		//关闭弹出对话框
-		webtest.click("xpath=//button[@class='components-button components-icon-button nux-dot-tip__disable']");
+		driver.findElement(By.id("post-content-0")).sendKeys("记忆中");
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//button[contains(.,'更新')]")).click();
 		Thread.sleep(1000);	
-		//修改文章
-		actions.moveToElement(driver.findElement(By.xpath("//div[@class='editor-block-list__insertion-point-inserter']"))).perform();
-		webtest.click("xpath=//p[@aria-label='添加文字或输入/添加内容']");
-		Thread.sleep(1000);	
-		webtest.type("id=mce_0","记忆中");
-		webtest.click("xpath=//button[contains(.,'更新')]");
 		//断言
 		assertTrue(webtest.ifContains("Post updated"));		
 	}

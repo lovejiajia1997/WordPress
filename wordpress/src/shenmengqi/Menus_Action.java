@@ -1,6 +1,6 @@
-package com.wordpress.appModules;
+package shenmengqi;
 
-import com.wordpress.core.WebDriverEngine;
+import com.webtest.core.WebDriverEngine;
 
 /** 
 * author:shenmengqi 
@@ -31,12 +31,18 @@ public class Menus_Action {
 		webtest.click("xpath=//input[@id='save_menu_header']");
 	}
 	
-	public void delMenus(String name) {
+	public void delMenus(String name){
 		this.menus();
-		webtest.selectByValue("xpath=//select[@id='select-menu-to-edit']", name);
+		webtest.selectByVisibleText("name=menu", name);
 		webtest.click("xpath=//input[@value='Ñ¡Ôñ']");
 		webtest.click("xpath=//a[contains(.,'É¾³ý²Ëµ¥')]");
 		webtest.alertAccept();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	
@@ -46,9 +52,9 @@ public class Menus_Action {
 	
 	
 	public void login() {
-		webtest.open("/wp-login.php");
+		webtest.open("http://localhost:8032/wordpress/wp-admin/nav-menus.php");
 		webtest.typeAndClear("id=user_login", "admin");
-		webtest.typeAndClear("id=user_pass", "VJH$zxPNT3%enjVfHX");
+		webtest.typeAndClear("id=user_pass", "admin");
 		webtest.click("id=wp-submit");
 	}
 	

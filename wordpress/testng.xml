@@ -1,10 +1,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="wordpress" verbose="1" >
+<suite name="WordPress" verbose="1" >
 	<listeners> 
+		<listener class-name="com.webtest.core.WebTestListener" /> 
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
-		<listener class-name="com.webtest.core.WebTestListener" /> 
 	</listeners>
 	
 	<test name="登录模块">
@@ -13,7 +13,7 @@
 		</classes>
 	</test>
 	
-	<test name="标签模块">
+	<test name="标签管理">
 		<classes>
 			<class name="shisujia.AddTag_Test" />
 			<class name="shisujia.AlterTag_Test" />			
@@ -21,11 +21,75 @@
 		</classes>
 	</test>
 	
-	<test name="用户模块">
+	<test name="用户管理">
 		<classes>
 			<class name="shisujia.AddUser_Test" />	
 			<class name="shisujia.AlterUser_Test" />			
 			<class name="shisujia.DeleteUser_Test" />			
 		</classes>
-	</test>	
+	</test>
+	
+	<test name="评论管理">
+		<classes>
+			<class name="yangtianying.Comment_Test" />	
+			<class name="yangtianying.Tools_Test" />		
+		</classes>
+	</test>
+	
+		
+	
+	<test name="Settings模块">
+		<classes>
+			<class name="yuezhewei.Compose" />
+			<class name="yuezhewei.Readtest" />
+			<class name="yuezhewei.Discuss" />
+			<class name="yuezhewei.Medio" />
+		</classes>
+	</test>
+	
+	
+	<test name="页面管理">
+		<classes>
+			<class name="liujiang.Createpages" />
+			<class name="liujiang.FindPages" />
+			<class name="liujiang.ChangePages" />
+			<class name="liujiang.DeletePages" />
+		</classes>
+	</test>
+	
+	
+	<test name="文章管理">
+		<classes>
+			<class name="ludanqi123.Add_Article_Test" />
+			<class name="ludanqi123.Find_Article_Test" />
+			<class name="ludanqi123.Modify_Article_Test" />
+			<class name="ludanqi123.Delete_Article_Test" />			
+		</classes>
+	</test>
+	
+	<test name="目录管理">
+		<classes>		
+			<class name="ludanqi123.Add_Catalog_Test" />
+			<class name="ludanqi123.Find_Catalog_Test" />
+			<class name="ludanqi123.Modify_Catalog_Test" />
+			<class name="ludanqi123.Delete_Catalog_Test" />			
+		</classes>
+	</test>
+	
+	<test name="插件管理">
+		<classes>
+			<class name="liujiang.PluginInstall" />
+		</classes>
+	</test>
+	
+	<test name="菜单定义模块">
+		<classes>
+			<class name="shenmengqi.Menus_Test" />
+			<class name="shenmengqi.Theme_Test" />
+		</classes>
+	</test>
+	
+		
+	
+	
 </suite>

@@ -2,7 +2,7 @@
  * author:Áõ½­
  * ²éÕÒ²å¼ş
  */
-package com.webtest.demo;
+package liujiang;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

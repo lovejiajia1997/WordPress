@@ -1,6 +1,6 @@
-package com.wordpress.appModules;
+package shenmengqi;
 
-import com.wordpress.core.WebDriverEngine;
+import com.webtest.core.WebDriverEngine;
 
 /** 
 * author:shenmengqi 
@@ -13,21 +13,21 @@ public class LittleTools_Action {
 	
 	private WebDriverEngine webtest;
 	
-	String addtoolspath = "//a[contains(@href,'/wordpress/wp-admin/widgets.php?editwidget=rss-1&addnew=1&num=3&base=rss')]";
-	String edittoolspath = "//a[contains(@href,'/wordpress/wp-admin/widgets.php?editwidget=rss-2&sidebar=sidebar-1&key=5')]";
-	String savepath = "//input[@value='保存小工具']";
+	String addtoolspath = "html.wp-toolbar body.wp-admin.wp-core-ui.js.widgets_access.widgets-php.auto-fold.admin-bar.branch-4-9.version-4-9-8.admin-color-fresh.locale-zh-cn.customize-support.svg div#wpwrap div#wpcontent div#wpbody div#wpbody-content div.wrap div.widget-liquid-left div#widgets-left div#available-widgets.widgets-holder-wrap div.widget-holder div#widget-list div#widget-1_rss-__i__.widget div.widget-top div.widget-title-action a.widget-control-edit.hide-if-js";
+	String edittoolspath = "html.wp-toolbar body.wp-admin.wp-core-ui.js.widgets_access.widgets-php.auto-fold.admin-bar.branch-4-9.version-4-9-8.admin-color-fresh.locale-zh-cn.customize-support.svg div#wpwrap div#wpcontent div#wpbody div#wpbody-content div.wrap div.widget-liquid-right div#widgets-right.wp-clearfix.single-sidebar div.sidebars-column-1 div.widgets-holder-wrap div#sidebar-1.widgets-sortables div#widget-18_rss-2.widget div.widget-top div.widget-title-action a.widget-control-edit.hide-if-js";
+	String savepath = "//input[@id='savewidget']";
 	
 	
 	public void addTools() {
 		this.tools();
-		webtest.click("xapth="+addtoolspath);
+		webtest.click("css="+addtoolspath);
 		webtest.click("xpath="+savepath);
 	}
 	
 	
 	public void editTools(String url,String i) {
 		this.tools();
-		webtest.click("xpath="+edittoolspath);
+		webtest.click("css="+edittoolspath);
 		//在此输入RSS feed URL
 		webtest.type("xpath=//input[@id='rss-url-2']", url);
 		//下拉菜单
@@ -42,7 +42,8 @@ public class LittleTools_Action {
 	
 	public void delTools() {
 		this.tools();
-		webtest.click("xpath="+edittoolspath);
+		webtest.click("css="+edittoolspath);
+		webtest.click("xpath=//input[@id='removewidget']");
 		webtest.click("xpath="+savepath);
 	}
 	
@@ -64,13 +65,14 @@ public class LittleTools_Action {
 	
 	public void tools() {
 		this.login();
-		webtest.click("xpath=//div[contains(@class,'wp-menu-image dashicons-before dashicons-admin-appearance')]");
-//		webtest.click("xpath=//div[text()='外观']");
-		webtest.click("xpath=//a[@href='widgets.php']");
-		webtest.click("xpath=//button[@id='show-settings-link']");
-		if(webtest.isElementPresent("xpath=//a[@id='access-on']")) {
-			webtest.click("xpath=//a[@id='access-on']");
-		}
+		webtest.click("xpath=//div[text()='外观']");
+		webtest.click("xpath=//a[text()='小工具']");
+		
+		
+//		webtest.click("xpath=//button[@id='show-settings-link']");
+//		if(webtest.isElementPresent("xpath=//a[@id='access-on']")) {
+//			webtest.click("xpath=//a[@id='access-on']");
+//		}
 	}
 	
 	

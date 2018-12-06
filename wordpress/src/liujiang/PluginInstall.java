@@ -2,7 +2,7 @@
  * author:刘江
  * 安装插件
  */
-package com.webtest.demo;
+package liujiang;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

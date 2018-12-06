@@ -1,11 +1,9 @@
 package ludanqi123;
-import com.webtest.core.*;
 
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -29,10 +27,10 @@ public class Find_Article_Test extends BaseTest{
 	}
 
 	@Test
-	public void testLogin() throws Exception  {		
+	public void findArticle() throws Exception  {		
 		//登录
 		webtest.open("http://localhost:8032/wordpress/wp-login.php");
-		action.login("ludanqi", "970901");
+		action.login("admin", "admin");
 		Thread.sleep(1000);
 		//移动语句只能使用driver
 		Actions actions = new Actions(driver);

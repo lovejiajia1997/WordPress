@@ -1,4 +1,4 @@
-package com.webtest.demo;
+package yuezhewei;
 
 import static org.testng.Assert.assertTrue;
 
@@ -17,7 +17,7 @@ public class Readtest extends BaseTest {
 			   webtest.open("http://localhost:8032/wordpress/wp-login.php?loggedout=true");
 			   //ÎÄ±¾¿òÊäÈë
 			   webtest.type("name=log","admin");
-			   webtest.type("name=pwd","123456");
+			   webtest.type("name=pwd","admin");
 			   webtest.click("xpath=//input[@type='submit']");
 			   assertTrue(webtest.isTextPresent("µÇÂ¼"));	   
 		   }

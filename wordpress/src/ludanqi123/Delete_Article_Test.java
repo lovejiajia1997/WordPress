@@ -30,18 +30,17 @@ Login_Action action;
 	public void testLogin() throws Exception  {		
 		//登录
 		webtest.open("http://localhost:8032/wordpress/wp-login.php");
-		action.login("ludanqi", "970901");
-		Thread.sleep(3000);
-		//移动语句只能使用driver
-		Actions actions = new Actions(driver);
-		actions.moveToElement(driver.findElement(By.xpath("//div[text()='文章']"))).perform();
-		Thread.sleep(3000);
+		action.login("admin", "admin");
+		Thread.sleep(1000);
 		//进入“所有文章”页面
-		webtest.click("xpath=//a[text()='所有文章']");
+		webtest.click("xpath=//div[text()='文章']");
 		Thread.sleep(1000);	
-		//点击题目上的回收站
+		
+		//点击回收站
+		Actions actions = new Actions(driver);
 		actions.moveToElement(driver.findElement(By.xpath("//a[contains(.,'冬日告白')]"))).perform();
-		webtest.click("xpath=//a[@aria-label='移动“冬日告白”到垃圾箱']");
+		driver.findElement(By.xpath("//a[@aria-label='移动“冬日告白”到垃圾箱']")).click();
+		Thread.sleep(1000);
 		//断言
 		assertTrue(webtest.ifContains("已移动1篇文章到回收站"));
 	}

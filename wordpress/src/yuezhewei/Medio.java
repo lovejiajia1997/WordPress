@@ -1,4 +1,4 @@
-package com.webtest.demo;
+package yuezhewei;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -13,7 +13,7 @@ public class Medio extends BaseTest {
 	public void testLogin() {
 		webtest.open("http://localhost:8032/wordpress/wp-login.php");
 		webtest.type("id=user_login","admin");
-		webtest.type("id=user_pass", "123456");
+		webtest.type("id=user_pass", "admin");
 		webtest.click("xpath=//input[@value='µÇÂ¼']");	
 	}
 	@Test(priority=1)

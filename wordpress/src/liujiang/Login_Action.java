@@ -1,4 +1,4 @@
-package com.webtest.demo;
+package liujiang;
 
 import com.webtest.core.WebDriverEngine;
 
