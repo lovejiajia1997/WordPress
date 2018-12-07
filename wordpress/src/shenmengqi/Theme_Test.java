@@ -16,13 +16,14 @@ import com.webtest.core.BaseTest;
 
 public class Theme_Test extends BaseTest{
 	
-	String changethemename = "Twenty Thirteen";
-	String addthemename = "Twenty Thirteen";
+	String changethemename = "Twenty Seventeen";
+	String addthemename = "Relativity";
 
 	
 	@Test(description="启用已安装的主题",priority=0)
 	public void changeTheme() {
 		waiguan.changeTheme(changethemename);
+<<<<<<< HEAD
 	}
 	
 	
@@ -33,6 +34,10 @@ public class Theme_Test extends BaseTest{
 		
 	}
 	
+=======
+		assertTrue(webtest.ifContains("新主题已激活"));
+	}	
+>>>>>>> 1f858e3cb07ebaeb3c9daa5767d6cc3e237cb45f
 	
 	@Test(description="搜索添加主题",priority=2)
 	public void addThemeBySearch() {
