@@ -68,7 +68,7 @@ Login_Action action;
 		
 		//发布文章
 		webtest.click("xpath=//button[contains(.,'发布...')]");
-		Thread.sleep(1000);	
+		Thread.sleep(2000);	
 		webtest.click("xpath=//button[@class='components-button editor-post-publish-button is-button is-default is-primary is-large']");
 		
 		//断言

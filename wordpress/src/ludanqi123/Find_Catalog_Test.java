@@ -30,7 +30,7 @@ Login_Action action;
 	}
 
 	@Test
-	public void testLogin() throws Exception  {	
+	public void findCataLog() throws Exception  {	
 		//µÇÂ¼
 		webtest.open("http://localhost:8032/wordpress/wp-login.php");
 		action.login("admin", "admin");
