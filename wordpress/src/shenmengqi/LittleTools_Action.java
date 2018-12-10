@@ -1,6 +1,6 @@
-package shenmengqi;
+package com.wordpress.appModules;
 
-import com.webtest.core.WebDriverEngine;
+import com.wordpress.core.WebDriverEngine;
 
 /** 
 * author:shenmengqi 
@@ -13,28 +13,32 @@ public class LittleTools_Action {
 	
 	private WebDriverEngine webtest;
 	
-	String addtoolspath = "html.wp-toolbar body.wp-admin.wp-core-ui.js.widgets_access.widgets-php.auto-fold.admin-bar.branch-4-9.version-4-9-8.admin-color-fresh.locale-zh-cn.customize-support.svg div#wpwrap div#wpcontent div#wpbody div#wpbody-content div.wrap div.widget-liquid-left div#widgets-left div#available-widgets.widgets-holder-wrap div.widget-holder div#widget-list div#widget-1_rss-__i__.widget div.widget-top div.widget-title-action a.widget-control-edit.hide-if-js";
-	String edittoolspath = "html.wp-toolbar body.wp-admin.wp-core-ui.js.widgets_access.widgets-php.auto-fold.admin-bar.branch-4-9.version-4-9-8.admin-color-fresh.locale-zh-cn.customize-support.svg div#wpwrap div#wpcontent div#wpbody div#wpbody-content div.wrap div.widget-liquid-right div#widgets-right.wp-clearfix.single-sidebar div.sidebars-column-1 div.widgets-holder-wrap div#sidebar-1.widgets-sortables div#widget-18_rss-2.widget div.widget-top div.widget-title-action a.widget-control-edit.hide-if-js";
+	int toolsid = 22;//在整个页面中他是第几个出现的小工具，这个数字就是几
+	int editi = 2;//页面中出现的是几个小工具，这个数字就是几
+	
+	String editid = "widget-"+toolsid+"_rss-"+editi;
+	//点击保存按钮
 	String savepath = "//input[@id='savewidget']";
 	
 	
 	public void addTools() {
+		String addid = "widget-1_rss-__i__";
 		this.tools();
-		webtest.click("css="+addtoolspath);
+		webtest.click("xpath=//div[@id='"+addid+"']/div/div/a/span[@class='add']");
 		webtest.click("xpath="+savepath);
 	}
 	
 	
 	public void editTools(String url,String i) {
 		this.tools();
-		webtest.click("css="+edittoolspath);
+		webtest.click("xpath=//div[@id='"+editid+"']/div/div/a/span[@class='edit']");
 		//在此输入RSS feed URL
-		webtest.type("xpath=//input[@id='rss-url-2']", url);
+		webtest.type("xpath=//input[@id='rss-url-"+editi+"']", url);
 		//下拉菜单
-		webtest.selectByValue("xpath=//select[@id='rss-items-2']", i);
+		webtest.selectByValue("xpath=//select[@id='rss-items-"+editi+"']", i);
 		//复选框,显示条目日期
-		webtest.click("xpath=//input[@id='rss-show-author-2']");
-		webtest.click("xpath=//input[@id='rss-show-date-2']");
+		webtest.click("xpath=//input[@id='rss-show-author-"+editi+"']");
+		webtest.click("xpath=//input[@id='rss-show-date-"+editi+"']");
 		
 		webtest.click("xpath="+savepath);
 	}
@@ -42,9 +46,8 @@ public class LittleTools_Action {
 	
 	public void delTools() {
 		this.tools();
-		webtest.click("css="+edittoolspath);
+		webtest.click("xpath=//div[@id='"+editid+"']/div/div/a/span[@class='edit']");
 		webtest.click("xpath=//input[@id='removewidget']");
-		webtest.click("xpath="+savepath);
 	}
 	
 	
