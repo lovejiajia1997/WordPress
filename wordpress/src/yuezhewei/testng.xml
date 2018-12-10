@@ -7,7 +7,7 @@
 
 	<test name="test1">
 			<classes>
-			<class name="com.webtest.demo.admin_Login" />
+			<class name="com.webtest.demo.Routine" />
 		</classes>
 	</test>
 	<test name="test2">
@@ -30,6 +30,12 @@
 			<class name="com.webtest.demo.Medio" />
 		</classes>
 	</test>
+	<test name="test6">
+			<classes>
+			<class name="com.webtest.demo.Fixedlinks" />
+		</classes>
+	</test>
+
 
 
 
