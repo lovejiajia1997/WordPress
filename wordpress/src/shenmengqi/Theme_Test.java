@@ -1,4 +1,4 @@
-package shenmengqi;
+package com.wordpress.test;
 
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
@@ -6,7 +6,8 @@ import static org.testng.Assert.assertTrue;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.webtest.core.BaseTest;
+import com.wordpress.appModules.Theme_Action;
+import com.wordpress.core.BaseTest;
 
 /** 
 * author:shenmengqi 
@@ -16,28 +17,21 @@ import com.webtest.core.BaseTest;
 
 public class Theme_Test extends BaseTest{
 	
-	String changethemename = "Twenty Seventeen";
+	String changethemename = "Twenty Sixteen";
 	String addthemename = "Relativity";
 
 	
 	@Test(description="启用已安装的主题",priority=0)
 	public void changeTheme() {
 		waiguan.changeTheme(changethemename);
-<<<<<<< HEAD
-	}
-	
-	
-	@Test(description="添加主题",priority=1)
-	public void addThemeByLink() {
-		waiguan.addThemeByLink(addthemename);
-		assertFalse(webtest.ifContains("正在安装"));
-		
-	}
-	
-=======
 		assertTrue(webtest.ifContains("新主题已激活"));
-	}	
->>>>>>> 1f858e3cb07ebaeb3c9daa5767d6cc3e237cb45f
+	}
+	
+	@Test(description="将主题恢复至默认主题",priority=1)
+	public void defaulttheme() {
+		waiguan.changeTheme("Twenty Seventeen");
+		assertTrue(webtest.ifContains("新主题已激活"));
+	}
 	
 	@Test(description="搜索添加主题",priority=2)
 	public void addThemeBySearch() {
