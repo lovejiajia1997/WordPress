@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 
-public class DeletePages extends BaseTest{
+public class DeletePages_Test extends BaseTest{
 	Login_Action action;
 	@BeforeMethod
 	public void setup() throws Exception

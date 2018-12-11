@@ -1,13 +1,13 @@
-package com.wordpress.test;
+package shenmengqi;
 
 import static org.testng.Assert.assertTrue;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.wordpress.appModules.LittleTools_Action;
-import com.wordpress.appModules.Theme_Action;
-import com.wordpress.core.BaseTest;
+import com.webtest.core.BaseTest;
+
+
 
 /** 
 * author:shenmengqi 

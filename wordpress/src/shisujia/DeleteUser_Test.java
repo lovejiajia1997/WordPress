@@ -18,7 +18,7 @@ public class DeleteUser_Test extends BaseTest {
 	{
 		action=new Login_Action(webtest);
 		webtest.open("http://localhost:8032/wordpress/wp-login.php");
-		action.login("admin", "admin");
+		action.login();
 		driver.findElement(By.xpath("//div[text()='”√ªß']")).click();
 		Thread.sleep(3000);
 	}

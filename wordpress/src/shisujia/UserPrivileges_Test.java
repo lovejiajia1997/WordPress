@@ -16,7 +16,7 @@ public class UserPrivileges_Test extends BaseTest {
 		Login_Action action;
 		action=new Login_Action(webtest);
 		webtest.open("http://localhost:8032/wordpress/wp-login.php");	
-		action.login("1", "1");
+		action.loginNew("1", "1");
 		Thread.sleep(1000);
 		webtest.JavaScriptClick("xpath=//div[text()='“«±Ì≈Ã']");
 		Thread.sleep(3000);
@@ -31,7 +31,7 @@ public class UserPrivileges_Test extends BaseTest {
 		action=new Login_Action(webtest);
 		webtest.open("http://localhost:8032/wordpress/wp-login.php");
 		try {
-			action.login("12", "12");
+			action.loginNew("12", "12");
 			Thread.sleep(3000);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

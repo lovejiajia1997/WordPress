@@ -1,6 +1,5 @@
-package com.webtest.demo;
+package yuezhewei;
 
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
@@ -8,7 +7,7 @@ import com.webtest.core.BaseTest;
  * author:yuezhewei
  * Settings÷–√ΩÃÂµƒ≤‚ ‘
  */
-public class Medio extends BaseTest {
+public class Medio_Test extends BaseTest {
 	@Test(priority=0)
 	public void testLogin() {
 		webtest.open("http://localhost:8032/wordpress/wp-login.php");

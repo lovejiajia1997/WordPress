@@ -1,4 +1,4 @@
-package com.webtest.demo;
+package yuezhewei;
 
 import static org.testng.Assert.assertTrue;
 
@@ -10,7 +10,7 @@ import com.webtest.core.BaseTest;
  * author:yuezhewei
  * Settings中常规的测试
  */
-public class Routine extends BaseTest {
+public class Routine_Test extends BaseTest {
 	@BeforeMethod
    public void testLogin() {
 	   //打开页面

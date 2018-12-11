@@ -1,4 +1,4 @@
-package com.webtest.demo;
+package yuezhewei;
 
 import static org.testng.Assert.assertTrue;
 
@@ -10,7 +10,7 @@ import com.webtest.core.BaseTest;
  * author:yuezhewei
  * Settings中撰写的测试
  */
-public class Compose extends BaseTest {  
+public class Compose_Test extends BaseTest {  
 	@BeforeMethod
   public void login (){
 	  //打开页面

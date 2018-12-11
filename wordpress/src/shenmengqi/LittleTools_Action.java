@@ -1,6 +1,6 @@
-package com.wordpress.appModules;
+package shenmengqi;
 
-import com.wordpress.core.WebDriverEngine;
+import com.webtest.core.WebDriverEngine;
 
 /** 
 * author:shenmengqi 
@@ -14,8 +14,8 @@ public class LittleTools_Action {
 	
 	private WebDriverEngine webtest;
 	
-	int toolsid = 22;//在整个页面中他是第几个出现的小工具，这个数字就是几
-	int editi = 2;//页面中出现的是几个小工具，这个数字就是几
+	int toolsid = 24;//在整个页面中他是第几个出现的小工具，这个数字就是几
+	int editi = 3;//页面中出现的是几个小工具，这个数字就是几
 	
 	String editid = "widget-"+toolsid+"_rss-"+editi;
 	//点击保存按钮
@@ -37,7 +37,7 @@ public class LittleTools_Action {
 		webtest.click("id=widget-1_rss-__i__");
 		webtest.tapClick();webtest.tapClick();webtest.tapClick();webtest.tapClick();
 		webtest.tapClick();webtest.tapClick();webtest.tapClick();webtest.tapClick();
-		webtest.enterClick();
+		webtest.enter();
 		webtest.click("id=save");
 	}
 	
@@ -68,12 +68,13 @@ public class LittleTools_Action {
 		this.toolsByUser();
 		webtest.pause(1000);
 		webtest.click("xpath=//h3[contains(.,'博客边栏')]");
-		webtest.click("xpath=//div[starts-with(@id,'widget-23_rss-')]");
+		webtest.click("xpath=//div[starts-with(@id,'widget-24_rss-')]");
 		webtest.tapClick();webtest.tapClick();webtest.tapClick();
 		webtest.tapClick();webtest.tapClick();webtest.tapClick();
 		webtest.tapClick();webtest.tapClick();webtest.tapClick();
-		webtest.tapClick();webtest.tapClick();webtest.tapClick();webtest.tapClick();
-		webtest.enterClick();
+		webtest.tapClick();webtest.tapClick();webtest.tapClick();
+		webtest.tapClick();webtest.tapClick();
+		webtest.enter();
 //		webtest.click("xpath=//button[contains(.,'移除')]");
 		webtest.pause(1000);
 		webtest.click("id=save");
@@ -86,9 +87,9 @@ public class LittleTools_Action {
 	
 	
 	public void login() {
-		webtest.open("/wp-login.php");
+		webtest.open("http://localhost:8032/wordpress/wp-login.php");
 		webtest.typeAndClear("id=user_login", "admin");
-		webtest.typeAndClear("id=user_pass", "VJH$zxPNT3%enjVfHX");
+		webtest.typeAndClear("id=user_pass", "admin");
 		webtest.click("id=wp-submit");
 	}
 	

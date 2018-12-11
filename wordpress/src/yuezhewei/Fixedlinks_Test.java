@@ -1,4 +1,4 @@
-package com.webtest.demo;
+package yuezhewei;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -9,7 +9,7 @@ import com.webtest.core.BaseTest;
  * author:yuezhewei
  * SettingsÖĞÌÖÂÛµÄ²âÊÔ
  */
-public class Fixedlinks extends BaseTest {
+public class Fixedlinks_Test extends BaseTest {
 	@BeforeMethod
 	public void testLogin() {
 		webtest.open("http://localhost:8032/wordpress/wp-login.php");

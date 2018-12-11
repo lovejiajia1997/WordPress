@@ -1,7 +1,7 @@
-package com.wordpress.appModules;
+package shenmengqi;
 
+import com.webtest.core.WebDriverEngine;
 import com.webtest.utils.Log;
-import com.wordpress.core.WebDriverEngine;
 
 /** 
 * author:shenmengqi 
@@ -18,30 +18,20 @@ public class Theme_Action {
 	//启用已安装主题	
 	public void changeTheme(String name) throws InterruptedException {
 		this.theme();
-<<<<<<< HEAD
-		if(webtest.isElementPresent("xpath=//h2[contains(.,'"+name+"')]"))
-			try {
-				{
-					
-					webtest.mouseoverElement("xpath=//h2[contains(.,'"+name+"')]");
-					webtest.JavaScriptClick("xpath=//a[contains(@aria-label,'激活"+name+"')]");
-				}
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		else {
-=======
 		if(webtest.isElementPresent("xpath=//h2[contains(.,'"+name+"')]")) {
 			
 			webtest.mouseoverElement("xpath=//h2[contains(.,'"+name+"')]");
 			webtest.JavaScriptClick("xpath=//a[contains(@aria-label,'激活"+name+"')]");
 		}else {
->>>>>>> 4c9db192bf13b9aded2c6f4fa904e54f81329e0b
-			Log.info(name+"正在应用");
+
+			if(webtest.isElementPresent("xpath=//h2[contains(.,'"+name+"')]")) {
+				webtest.mouseoverElement("xpath=//h2[contains(.,'"+name+"')]");
+				webtest.JavaScriptClick("xpath=//a[contains(@aria-label,'激活"+name+"')]");
+			}else {
+				Log.info(name+"正在应用");
+			}
 		}
 	}
-	
 	
 	//添加主题
 	//搜索主题并添加
@@ -52,9 +42,7 @@ public class Theme_Action {
 			webtest.click("xpath=//a[@class='hide-if-no-js page-title-action']");
 //		通过按钮进入添加界面
 //		webtest.click("xpath=//a[contains(.,'添加新主题')]");
-<<<<<<< HEAD
-=======
-		
+
 		webtest.typeAndClear("id=wp-filter-search-input",name);
 		try {
 			webtest.wait(5000);
@@ -65,19 +53,11 @@ public class Theme_Action {
 		webtest.mouseoverElement("xpath=//h3[contains(.,'"+name+"')]");
 		if(webtest.isElementPresent("xpath=//a[@aria-label='安装"+name+"']")) {
 			webtest.JavaScriptClick("xpath=//a[@aria-label='安装"+name+"']");
->>>>>>> 4c9db192bf13b9aded2c6f4fa904e54f81329e0b
-			
 			webtest.typeAndClear("id=wp-filter-search-input",name);
-			try {
-				webtest.wait(5000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			webtest.wait(5000);		
 			webtest.mouseoverElement("xpath=//h3[contains(.,'"+name+"')]");
 			if(webtest.isElementPresent("xpath=//a[@aria-label='安装"+name+"']")) {
-				webtest.JavaScriptClick("xpath=//a[@aria-label='安装"+name+"']");
-				
+				webtest.JavaScriptClick("xpath=//a[@aria-label='安装"+name+"']");				
 				int i=0;
 				while(i<2 && !webtest.ifContains("正在安装")) {
 					webtest.pause(5000);
@@ -86,9 +66,9 @@ public class Theme_Action {
 			}else {
 				Log.error("Theme_Action-"+name+"主题已安装");
 			}
-			
-		}
-	} 
+			}
+		} 
+	}
 	
 	//删除添加的主题
 	public void delTheme(String name) {

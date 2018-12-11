@@ -19,7 +19,7 @@ public class DeleteTag_Test extends BaseTest {
 	{
 		action=new Login_Action(webtest);
 		webtest.open("http://localhost:8032/wordpress/wp-login.php");
-		action.login("admin", "admin");
+		action.login();
 	}
 	public boolean ifContains(String content) {
 		return driver.getPageSource().contains(content);

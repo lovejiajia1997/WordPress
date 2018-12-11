@@ -19,7 +19,7 @@ public class AlterUser_Test extends BaseTest{
 	{
 		action=new Login_Action(webtest);
 		webtest.open("http://localhost:8032/wordpress/wp-login.php");
-		action.login("admin", "admin");
+		action.login();
 	}
 	
 	

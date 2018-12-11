@@ -1,4 +1,4 @@
-package com.wordpress.test;
+package shenmengqi;
 
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
@@ -6,8 +6,7 @@ import static org.testng.Assert.assertTrue;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.wordpress.appModules.Theme_Action;
-import com.wordpress.core.BaseTest;
+import com.webtest.core.BaseTest;
 
 
 /** 
@@ -29,18 +28,13 @@ public class Theme_Test extends BaseTest{
 	}
 	
 	@Test(description="将主题恢复至默认主题",priority=1)
-<<<<<<< HEAD
-	public void defaulttheme() throws InterruptedException {
+
+	public void theme() throws InterruptedException {
 		waiguan.changeTheme("Twenty Seventeen");
 		assertTrue(webtest.ifContains("新主题已激活"));
 	}
-=======
-	public void defaulttheme() {
-		waiguan.changeTheme("Twenty Seventeen");
-		assertTrue(webtest.ifContains("新主题已激活"));
-	}
+
 	
->>>>>>> 4c9db192bf13b9aded2c6f4fa904e54f81329e0b
 	@Test(description="搜索添加主题",priority=2)
 	public void addThemeBySearch() throws InterruptedException {
 		waiguan.addThemeBySearch(addthemename);
@@ -53,7 +47,6 @@ public class Theme_Test extends BaseTest{
 		waiguan.delTheme(addthemename);
 		assertFalse(webtest.ifContains(addthemename));
 	}
-	
 	
 	
 	Theme_Action waiguan;

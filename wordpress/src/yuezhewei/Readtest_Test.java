@@ -1,4 +1,4 @@
-package com.webtest.demo;
+package yuezhewei;
 
 import static org.testng.Assert.assertTrue;
 
@@ -10,7 +10,7 @@ import com.webtest.core.BaseTest;
  * author:yuezhewei
  * Setting中阅读的测试
  */
-public class Readtest extends BaseTest {
+public class Readtest_Test extends BaseTest {
 	      @Test(priority=0)
 		  public void testLogin() {
 			   //打开页面

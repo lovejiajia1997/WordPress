@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 
-public class PluginFind extends BaseTest{
+public class PluginFind_Test extends BaseTest{
 	Login_Action action;
 	@BeforeMethod
 	public void setup() throws Exception
