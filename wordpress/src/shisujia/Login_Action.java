@@ -11,8 +11,8 @@ public class Login_Action {
 	  public void login(String username,String password) throws Exception 
 	  {
 	
-			webtest.type("id=user_login", "admin");
-			webtest.type("name=pwd", "admin");
+			webtest.type("id=user_login", username);
+			webtest.type("name=pwd", password);
 			webtest.click("xpath=//input[@id='wp-submit']");
 			
 		

@@ -1,6 +1,6 @@
-package shenmengqi;
+package com.wordpress.appModules;
 
-import com.webtest.core.WebDriverEngine;
+import com.wordpress.core.WebDriverEngine;
 
 /** 
 * author:shenmengqi 

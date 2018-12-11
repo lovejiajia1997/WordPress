@@ -1,11 +1,11 @@
-package yuezhewei;
+package com.webtest.demo;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 /**
- * author:lihuanzhen
+ * author:yuezhewei
  * SettingsÖÐÃ½ÌåµÄ²âÊÔ
  */
 public class Medio extends BaseTest {
@@ -13,7 +13,7 @@ public class Medio extends BaseTest {
 	public void testLogin() {
 		webtest.open("http://localhost:8032/wordpress/wp-login.php");
 		webtest.type("id=user_login","admin");
-		webtest.type("id=user_pass", "admin");
+		webtest.type("id=user_pass", "123456");
 		webtest.click("xpath=//input[@value='µÇÂ¼']");	
 	}
 	@Test(priority=1)
@@ -27,8 +27,9 @@ public class Medio extends BaseTest {
 		  
 		  webtest.typeAndClear("name=medium_size_w", "0");
 		  webtest.typeAndClear("name=medium_size_h", "0");
-		  webtest.typeAndClear("name=large_size_w", "0");
-		  webtest.typeAndClear("name=large_size_h", "0");	  
+		  webtest.typeAndClear("name=large_size_w", "0");		  
+		  webtest.typeAndClear("name=large_size_h", "0");	
+		  webtest.click("xpath=//input[@type='submit']");
 	}
 	@Test(priority=2)
 	public void medio1() {
@@ -42,7 +43,8 @@ public class Medio extends BaseTest {
 		  webtest.typeAndClear("name=medium_size_w", "3");
 		  webtest.typeAndClear("name=medium_size_h", "4");
 		  webtest.typeAndClear("name=large_size_w", "5");
-		  webtest.typeAndClear("name=large_size_h", "6");	  
+		  webtest.typeAndClear("name=large_size_h", "6");
+		  webtest.click("xpath=//input[@type='submit']");
 	}
 	@Test(priority=3)
 	public void medio2() {
@@ -56,6 +58,7 @@ public class Medio extends BaseTest {
 		  webtest.typeAndClear("name=medium_size_w", "999999999");
 		  webtest.typeAndClear("name=medium_size_h", "999999999");
 		  webtest.typeAndClear("name=large_size_w", "999999999");
-		  webtest.typeAndClear("name=large_size_h", "999999999");	  
+		  webtest.typeAndClear("name=large_size_h", "999999999");
+		  webtest.click("xpath=//input[@type='submit']");
 	}
 }

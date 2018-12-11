@@ -1,11 +1,17 @@
-package shenmengqi;
+package com.wordpress.test;
 
 import static org.testng.Assert.assertTrue;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+<<<<<<< HEAD
 import com.webtest.core.BaseTest;
+=======
+import com.wordpress.appModules.LittleTools_Action;
+import com.wordpress.appModules.Theme_Action;
+import com.wordpress.core.BaseTest;
+>>>>>>> 4c9db192bf13b9aded2c6f4fa904e54f81329e0b
 
 /** 
 * author:shenmengqi 
