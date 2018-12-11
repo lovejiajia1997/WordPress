@@ -16,14 +16,20 @@ public class Theme_Action {
 	
 	
 	//启用已安装主题	
-	public void changeTheme(String name) {
+	public void changeTheme(String name) throws InterruptedException {
 		this.theme();
-		if(webtest.isElementPresent("xpath=//h2[contains(.,'"+name+"')]")) {
-			
-			webtest.mouseoverElement("xpath=//h2[contains(.,'"+name+"')]");
-			
-			webtest.JavaScriptClick("xpath=//a[contains(@aria-label,'激活"+name+"')]");
-		}else {
+		if(webtest.isElementPresent("xpath=//h2[contains(.,'"+name+"')]"))
+			try {
+				{
+					
+					webtest.mouseoverElement("xpath=//h2[contains(.,'"+name+"')]");
+					webtest.JavaScriptClick("xpath=//a[contains(@aria-label,'激活"+name+"')]");
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		else {
 			Log.info(name+"正在应用");
 		}
 	}
@@ -31,35 +37,36 @@ public class Theme_Action {
 	
 	//添加主题
 	//搜索主题并添加
-	public void addThemeBySearch(String name) {
-		this.theme();
+	public void addThemeBySearch(String name) throws InterruptedException {
+		{
+			this.theme();
 //		通过添加链接进入添加界面
-		webtest.click("xpath=//a[@class='hide-if-no-js page-title-action']");
+			webtest.click("xpath=//a[@class='hide-if-no-js page-title-action']");
 //		通过按钮进入添加界面
 //		webtest.click("xpath=//a[contains(.,'添加新主题')]");
-		
-		webtest.typeAndClear("id=wp-filter-search-input",name);
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		webtest.mouseoverElement("xpath=//h3[contains(.,'"+name+"')]");
-		if(webtest.isElementPresent("xpath=//a[@data-name='"+name+"']")) {
-			webtest.JavaScriptClick("xpath=//a[@data-name='"+name+"']");
 			
-			int i=0;
-			while(i<2 && !webtest.ifContains("正在安装")) {
-				webtest.pause(5000);
-				i++;
+			webtest.typeAndClear("id=wp-filter-search-input",name);
+			try {
+				webtest.wait(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-		}else {
-			Log.error("Theme_Action-"+name+"主题已安装");
+			webtest.mouseoverElement("xpath=//h3[contains(.,'"+name+"')]");
+			if(webtest.isElementPresent("xpath=//a[@aria-label='安装"+name+"']")) {
+				webtest.JavaScriptClick("xpath=//a[@aria-label='安装"+name+"']");
+				
+				int i=0;
+				while(i<2 && !webtest.ifContains("正在安装")) {
+					webtest.pause(5000);
+					i++;
+				}
+			}else {
+				Log.error("Theme_Action-"+name+"主题已安装");
+			}
+			
 		}
-		
-	}
-
+	} 
 	
 	//删除添加的主题
 	public void delTheme(String name) {
@@ -89,7 +96,7 @@ public class Theme_Action {
 	public void login() {
 		webtest.open("/wp-login.php");
 		webtest.typeAndClear("id=user_login", "admin");
-		webtest.typeAndClear("id=user_pass", "admin");
+		webtest.typeAndClear("id=user_pass", "VJH$zxPNT3%enjVfHX");
 		webtest.click("id=wp-submit");
 	}
 	

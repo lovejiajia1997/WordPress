@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 
+
 /** 
 * author:shenmengqi 
 * @version 创建时间：2018年12月3日 下午3:26:56 
@@ -16,31 +17,23 @@ import com.webtest.core.BaseTest;
 
 public class Theme_Test extends BaseTest{
 	
-	String changethemename = "Twenty Seventeen";
+	String changethemename = "Twenty Sixteen";
 	String addthemename = "Relativity";
 
 	
 	@Test(description="启用已安装的主题",priority=0)
-	public void changeTheme() {
+	public void changeTheme() throws InterruptedException {
 		waiguan.changeTheme(changethemename);
-<<<<<<< HEAD
-	}
-	
-	
-	@Test(description="添加主题",priority=1)
-	public void addThemeByLink() {
-		waiguan.addThemeByLink(addthemename);
-		assertFalse(webtest.ifContains("正在安装"));
-		
-	}
-	
-=======
 		assertTrue(webtest.ifContains("新主题已激活"));
-	}	
->>>>>>> 1f858e3cb07ebaeb3c9daa5767d6cc3e237cb45f
+	}
 	
+	@Test(description="将主题恢复至默认主题",priority=1)
+	public void defaulttheme() throws InterruptedException {
+		waiguan.changeTheme("Twenty Seventeen");
+		assertTrue(webtest.ifContains("新主题已激活"));
+	}
 	@Test(description="搜索添加主题",priority=2)
-	public void addThemeBySearch() {
+	public void addThemeBySearch() throws InterruptedException {
 		waiguan.addThemeBySearch(addthemename);
 		assertFalse(webtest.ifContains("正在安装"));
 	}
