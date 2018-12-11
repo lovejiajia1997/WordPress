@@ -37,7 +37,7 @@ public class LittleTools_Action {
 		webtest.click("id=widget-1_rss-__i__");
 		webtest.tapClick();webtest.tapClick();webtest.tapClick();webtest.tapClick();
 		webtest.tapClick();webtest.tapClick();webtest.tapClick();webtest.tapClick();
-		webtest.enter();
+		webtest.enterClick();
 		webtest.click("id=save");
 	}
 	
@@ -73,7 +73,7 @@ public class LittleTools_Action {
 		webtest.tapClick();webtest.tapClick();webtest.tapClick();
 		webtest.tapClick();webtest.tapClick();webtest.tapClick();
 		webtest.tapClick();webtest.tapClick();webtest.tapClick();webtest.tapClick();
-		webtest.enter();
+		webtest.enterClick();
 //		webtest.click("xpath=//button[contains(.,'ÒÆ³ý')]");
 		webtest.pause(1000);
 		webtest.click("id=save");
