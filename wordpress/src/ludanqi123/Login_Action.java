@@ -13,15 +13,14 @@ public class Login_Action {
 	
 	private WebDriverEngine webtest;
 	
-	public Login_Action(WebDriverEngine webtest){
-		
+	public Login_Action(WebDriverEngine webtest){		
 		 this.webtest=webtest;
 	}
 	  
 	public void login(String name,String password){
 		
-		webtest.type("name=log", name);
-		webtest.type("name=pwd", password);
+		webtest.typeAndClear("name=log", name);
+		webtest.typeAndClear("name=pwd", password);
 		webtest.click("xpath=//input[@value='µÇÂ¼']");
 	 }
 	  

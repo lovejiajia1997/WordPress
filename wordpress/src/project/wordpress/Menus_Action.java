@@ -1,4 +1,4 @@
-package shenmengqi;
+package project.wordpress;
 
 import com.webtest.core.WebDriverEngine;
 

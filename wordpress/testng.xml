@@ -9,88 +9,73 @@
 	
 	<test name="登录模块">
 		<classes>
-			<class name="shisujia.Login_Test" />					
+			<class name="project.wordpress.Login_Test" />					
 		</classes>
 	</test>
 	
 	<test name="标签管理">
 		<classes>
-			<class name="shisujia.AddTag_Test" />
-			<class name="shisujia.AlterTag_Test" />			
-			<class name="shisujia.DeleteTag_Test" />						
+			<class name="project.wordpress.Tag_Test" />						
 		</classes>
 	</test>
 	
 	<test name="用户管理">
 		<classes>
-			<class name="shisujia.AddUser_Test" />	
-			<class name="shisujia.AlterUser_Test" />			
-			<class name="shisujia.DeleteUser_Test" />			
+			<class name="project.wordpress.User_Test" />	
+			<class name="project.wordpress.UserPrivileges_Test" />		
 		</classes>
 	</test>
 	
 	<test name="评论管理">
 		<classes>
-			<class name="yangtianying.Comment_Test" />	
-			<class name="yangtianying.Tools_Test" />		
+			<class name="project.wordpress.Comment_Test" />	
+			<class name="project.wordpress.Tools_Test" />		
 		</classes>
 	</test>		
 	
 	<test name="Settings模块">
 		<classes>
-			<class name="yuezhewei.Compose_Test" />
-			<class name="yuezhewei.Readtest_Test" />
-			<class name="yuezhewei.Discuss_Test" />
-			<class name="yuezhewei.Medio_Test" />
-			
+			<class name="project.wordpress.Settings_Test" />			
 		</classes>
 	</test>
 		
 	<test name="页面管理">
 		<classes>
-			<class name="liujiang.Createpages_Test" />
-			<class name="liujiang.FindPages_Test" />
-			<class name="liujiang.ChangePages_Test" />
-			<class name="liujiang.DeletePages_Test" />
+			<class name="project.wordpress.Pages_Test" />
 		</classes>
 	</test>
 	
 	<test name="文章管理">
 		<classes>
-			<class name="ludanqi123.Add_Article_Test" />
-			<class name="ludanqi123.Find_Article_Test" />
-			<class name="ludanqi123.Modify_Article_Test" />
-			<class name="ludanqi123.Delete_Article_Test" />			
+			<class name="project.wordpress.Article_Test" />		
 		</classes>
 	</test>
 	
 	<test name="目录管理">
 		<classes>		
-			<class name="ludanqi123.Add_Catalog_Test" />
-			<class name="ludanqi123.Find_Catalog_Test" />
-			<class name="ludanqi123.Modify_Catalog_Test" />
-			<class name="ludanqi123.Delete_Catalog_Test" />			
+			<class name="project.wordpress.Catalog_Test" />		
 		</classes>
 	</test>
 	
 	<test name="插件管理">
 		<classes>
-			<class name="liujiang.PluginInstall_Test" />
+			<class name="project.wordpress.Plugin_Test" />
 		</classes>
 	</test>
 	
 	<test name="菜单定义模块">
 		<classes>
-			<class name="shenmengqi.Menus_Test" />
-			<class name="shenmengqi.Theme_Test" />
-			<class name="shenmengqi.LittleTools_Test" />
+			<class name="project.wordpress.Menus_Test" />
+			<class name="project.wordpress.Theme_Test" />
+			<class name="project.wordpress.LittleTools_Test" />
+			<class name="project.wordpress.Custom_Other_Test" />
+			
 		</classes>
 	</test>
 	
 	<test name="媒体模块">
 		<classes>
-			<class name="weishijie.MediaLibraryUpload_Test" />
-			<class name="weishijie.MediaLibraryDelete_Test" />
+			<class name="project.wordpress.Media_Test" />
 		</classes>
 	</test>
 	
