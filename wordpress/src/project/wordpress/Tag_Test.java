@@ -75,6 +75,7 @@ public class Tag_Test extends BaseTest {
 		Thread.sleep(1000);
 		//弹出窗口处理
 		webtest.alertAccept();
+		Thread.sleep(1000);
 		System.out.println("删除标签成功");
 	
 	}

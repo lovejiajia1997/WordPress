@@ -36,7 +36,7 @@ public class Menus_Test extends BaseTest{
 	}
 	
 	@Test(priority=3)
-	public void delMenus() {
+	public void delMenus() throws InterruptedException {
 		menus.delMenus("测试菜单1");
 		
 		assertTrue(webtest.ifContains("菜单已被成功删除"));

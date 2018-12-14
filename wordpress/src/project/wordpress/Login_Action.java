@@ -13,16 +13,16 @@ public class Login_Action {
 	  {
 		  	String username = ReadProperties.getPropertyValue("username");
 		  	String password = ReadProperties.getPropertyValue("password");
-			webtest.type("id=user_login", username);
-			webtest.type("name=pwd", password);
+			webtest.typeAndClear("id=user_login", username);
+			webtest.typeAndClear("name=pwd", password);
 			webtest.click("xpath=//input[@id='wp-submit']");		
 		
 	  }
 	  
 	  public void loginNew(String username,String password) throws Exception 
 	  {
-			webtest.type("id=user_login", username);
-			webtest.type("name=pwd", password);
+			webtest.typeAndClear("id=user_login", username);
+			webtest.typeAndClear("name=pwd", password);
 			webtest.click("xpath=//input[@id='wp-submit']");		
 		
 	  }

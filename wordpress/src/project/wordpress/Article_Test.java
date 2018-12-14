@@ -75,12 +75,13 @@ public class Article_Test extends BaseTest {
 		
 		//断言
 		assertTrue(webtest.ifContains("朱正廷"));
+		webtest.goBack();
 	}
 	
 	
 	@Test(priority=2)
 	public void modifyArticle() throws Exception  {		
-		//移动语句只能使用driver
+		//移动语句只能使用driver	
 		webtest.click("xpath=//div[text()='文章']");	
 		
 		//点击题目上的回收站

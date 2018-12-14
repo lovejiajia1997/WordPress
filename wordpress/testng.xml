@@ -19,12 +19,6 @@
 		</classes>
 	</test>
 	
-	<test name="用户管理">
-		<classes>
-			<class name="project.wordpress.User_Test" />	
-			<class name="project.wordpress.UserPrivileges_Test" />		
-		</classes>
-	</test>
 	
 	<test name="评论管理">
 		<classes>
@@ -76,6 +70,13 @@
 	<test name="媒体模块">
 		<classes>
 			<class name="project.wordpress.Media_Test" />
+		</classes>
+	</test>
+	
+	<test name="用户管理">
+		<classes>
+			<class name="project.wordpress.User_Test" />	
+			<class name="project.wordpress.UserPrivileges_Test" />		
 		</classes>
 	</test>
 	

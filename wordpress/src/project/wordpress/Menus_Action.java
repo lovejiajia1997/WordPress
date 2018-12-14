@@ -36,13 +36,13 @@ public class Menus_Action {
 		webtest.selectByVisibleText("name=menu", name);
 		webtest.click("xpath=//input[@value='Ñ¡Ôñ']");
 		webtest.click("xpath=//a[contains(.,'É¾³ý²Ëµ¥')]");
-		webtest.alertAccept();
 		try {
+			webtest.alertAccept();
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}		
 	}
 	
 	

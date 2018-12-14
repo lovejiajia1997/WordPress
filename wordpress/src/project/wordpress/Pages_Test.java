@@ -1,6 +1,7 @@
 package project.wordpress;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -82,8 +83,10 @@ public class Pages_Test extends BaseTest{
 		//进入“写新建页面”页面
 		driver.findElement(By.xpath("//a[text()='所有页面']")).click();
 		Thread.sleep(1000);	
-		webtest.mouseoverElement("xpath=a[@aria-label='“test”（编辑）']");
+		webtest.mouseoverElement("xpath=//a[@aria-label='“test”（编辑）']");
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//a[@aria-label='移动“test”到垃圾箱']")).click();
+		Assert.assertTrue(ifContains("已移动1篇文章到回收站"));
+		
 	}
 }

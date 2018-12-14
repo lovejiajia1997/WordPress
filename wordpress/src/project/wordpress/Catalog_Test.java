@@ -66,6 +66,7 @@ public class Catalog_Test extends BaseTest{
 		
 		//∂œ—‘
 		assertTrue(webtest.ifContains("Œ¥’“µΩ"));
+		webtest.goBack();
 	}
 	
 	@Test(priority=2)

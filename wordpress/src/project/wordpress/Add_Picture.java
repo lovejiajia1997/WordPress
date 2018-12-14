@@ -1,9 +1,8 @@
-package com.webtest.demo;
+package project.wordpress;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
-import com.webtest.core.BaseTest;
 import com.webtest.core.WebDriverEngine;
 
 public class Add_Picture{

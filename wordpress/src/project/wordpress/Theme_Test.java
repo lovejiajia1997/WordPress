@@ -43,7 +43,7 @@ public class Theme_Test extends BaseTest{
 	
 	
 	@Test(description="删除已安装主题",priority=3)
-	public void delTheme() {
+	public void delTheme() throws InterruptedException {
 		waiguan.delTheme(addthemename);
 		assertFalse(webtest.ifContains(addthemename));
 	}

@@ -1,5 +1,6 @@
 package project.wordpress;
 
+import com.webtest.core.BaseTest;
 import com.webtest.core.WebDriverEngine;
 import com.webtest.utils.Log;
 
@@ -10,7 +11,7 @@ import com.webtest.utils.Log;
 * 外观模块下，添加主题的操作类 
 */
 
-public class Theme_Action {
+public class Theme_Action extends BaseTest{
 
 	private WebDriverEngine webtest;
 	

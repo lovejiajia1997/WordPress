@@ -1,6 +1,12 @@
 package project.wordpress;
 
+/*
+ * author:shisujia
+ * 用户操作类
+ */
+
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -58,13 +64,23 @@ public class User_Test extends BaseTest{
 		webtest.click("id=display_name");
 		webtest.click("xpath=//option[contains(.,'姓氏 名字')]");
 		webtest.click("id=submit");	
+		Assert.assertTrue(ifContains("已更新用户"));
 	}
 	
-	@Test(description="删除单个用户",priority=2)
-	public void deleteUser() throws Exception  {			
-		webtest.mouseoverElement("xpath=//td[contains(.,' 1234567编辑 | 删除 | 查看显示详情')]");
-		Thread.sleep(1000);
-		webtest.click("xpath=//a[text()='删除'");
+	@Test(priority=2)
+	public void findUser() throws InterruptedException {
+		webtest.click("xpath=//div[text()='用户']");
+		webtest.type("id=s", "1234567");
+		webtest.click("id=search-submit");
+		Assert.assertTrue(ifContains("1234567"));
+	}
+	
+	@Test(description="删除单个用户",priority=3)
+	public void deleteUser() throws Exception  {
+		webtest.click("xpath=//div[text()='用户']");
+		webtest.mouseoverElement("xpath=//a[text()='1234567']");
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//a[@class='submitdelete']")).click();
 		webtest.click("id=submit");
 	}
 }
