@@ -31,7 +31,7 @@ Login_Action action;
 	}
 
 	@Test
-	public void testLogin() throws Exception  {		
+	public void custom() throws Exception  {		
 		
 		//鼠标移动语句只能使用driver
 		Actions actions = new Actions(driver);
@@ -54,7 +54,7 @@ Login_Action action;
 		webtest.type("id=_customize-input-blogname","冬日告白");
 		//添加站点图标
 		webtest.click("xpath=//button[contains(.,'选择图像')]");
-		Thread.sleep(1000);	
+		Thread.sleep(3000);	
 		ap.addpic(webtest,actions,"TheWinterLight");
 		webtest.click("xpath=//button[contains(.,'裁剪图像')]");
 		//返回

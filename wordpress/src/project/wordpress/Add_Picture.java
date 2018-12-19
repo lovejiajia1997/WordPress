@@ -8,8 +8,8 @@ import com.webtest.core.WebDriverEngine;
 public class Add_Picture{
 
 	public void addpic(WebDriverEngine webtest,Actions actions,String picname) throws InterruptedException {
-		webtest.click("xpath=//button[contains(.,'Γ½ΜεΏβ')]");
-		Thread.sleep(1000);	
+		webtest.click("xpath=//a[contains(.,'Γ½ΜεΏβ')]");
+		Thread.sleep(3000);	
 		webtest.type("class=search",picname);
 		actions.sendKeys(Keys.ENTER).perform();
 		webtest.click("xpath=//div[@class='thumbnail']");
