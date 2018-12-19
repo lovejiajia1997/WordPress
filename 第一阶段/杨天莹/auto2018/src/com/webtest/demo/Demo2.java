@@ -7,12 +7,11 @@ import org.testng.annotations.Test;
 public class Demo2 {
 	@Test
 	public void test1() {
-		assertEquals(1, 1);
-
+		assertEquals(3, 3);
 	}
 
 	@Test
-	public void test3() {
-		assertEquals(4, 1);
+	public void test2() {
+		assertEquals(3, 4);
 	}
 }
