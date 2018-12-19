@@ -27,7 +27,7 @@ class Submit(unittest.TestCase):
              "logisticsCompanyId":1,
              "accessSource":"noSource"
         }
-        result = SendHttp().run_http(self.url, "POST", Common.getcookies(user), data)
+        result = SendHttp().run_http_test(self.url, "POST", Common.getcookies(user), data)
         print(result)
 
     def test_submit1(self):
@@ -38,7 +38,7 @@ class Submit(unittest.TestCase):
                 "area": "滨江区", "voiceStatus": 0, "needInvoice": 0, "invoiceHead": "", "transportFee": 0,
                 "logisticsCompanyId": 1, "accessSource": "noSource", "accessDevice": 0
             }
-            result = SendHttp().run_http(self.url, "POST", Common.getcookies(user), data)
+            result = SendHttp().run_http_test(self.url, "POST", Common.getcookies(user), data)
             print(result)
 
     def test_submit2(self):
@@ -61,20 +61,11 @@ class Submit(unittest.TestCase):
                     "accessSource":"noSource",
                     "accessDevice":0
                 }
-
-                # def test_add_address_failed_name_type_02（self）：
-                # res = Action（）。type_para（“ receiverName ”，“ ”）
-                # self.assertEqual（res[' code ']，400）
-                # self.assertEqual（res[' message ']，“请求参数不正确”）
-
-                result = SendHttp().run_http(self.url, "POST", Common.getcookies(user), data)
+                #result = SendHttp().send_post_bycookies(self.url, Common.getcookies(user), data)
+                result = SendHttp().run_http_test(self.url, "POST", Common.getcookies(user),data)
                 print(result)
                 # self.assertEqual(result['code'], 200)
                 # self.assertEqual(result['message'], '成功登陆')
 
-       # result = SendHttp().send_post_bycookies(self.url,common.getcookies(user),data)
-
-
-
-# if'__name__'=='__main__':
-#   Submit.test_submit()
+    # if'__name__'=='__main__':
+    #   Submit.test_submit()
