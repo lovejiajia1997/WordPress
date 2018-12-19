@@ -6,9 +6,9 @@ import org.testng.annotations.DataProvider;
 
 public class NSDataProvider {
 
-	@DataProvider(name = "txt")
+	@DataProvider(name = "WP_user")
 	public Object[][] getTxtData() throws IOException {
-		return new TxtDataProvider().getTxtUser("data/user.txt");
+		return new TxtDataProvider().getTxtUser("data/WP_user.txt");
 	}
 
 	@DataProvider(name = "excel")

@@ -1,59 +1,45 @@
 package com.webtest.core;
 
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
 import com.webtest.utils.Log;
-import com.webtest.utils.ReadProperties;
+
 /**
- * author:lihuanzhen
- * 页面对象操作类
+ * author:lihuanzhen 页面对象操作类
  */
 public class WebDriverEngine {
 
 	WebDriver driver = null;
 	ElementFinder finder = null;
-	Actions action  =null;
+	Actions action = null;
 
-	
 	public String[] getAllWindowTitles() {
 		// TODO Auto-generated method stub
-	    String current = driver.getWindowHandle();
+		String current = driver.getWindowHandle();
 
-	    List<String> attributes = new ArrayList<String>();
-	    for (String handle : driver.getWindowHandles()) {
-	      driver.switchTo().window(handle);
-	      attributes.add(driver.getTitle());
-	    }
+		List<String> attributes = new ArrayList<String>();
+		for (String handle : driver.getWindowHandles()) {
+			driver.switchTo().window(handle);
+			attributes.add(driver.getTitle());
+		}
 
-	    driver.switchTo().window(current);
+		driver.switchTo().window(current);
 
-	    return attributes.toArray(new String[attributes.size()]);
+		return attributes.toArray(new String[attributes.size()]);
 	}
 
+	// 构造
 	public WebDriverEngine(WebDriver driver) {
-	
+
 		this.driver = driver;
 		driver.manage().window().maximize();
 		finder = new ElementFinder(driver);
@@ -65,20 +51,19 @@ public class WebDriverEngine {
 		driver.switchTo().frame(frameID);
 		Log.info("Entered iframe " + frameID);
 	}
-	
 
-	
 	public void enterFrame(int frameID) {
 		this.pause(3000);
 		driver.switchTo().frame(frameID);
 		Log.info("Entered iframe " + frameID);
 	}
-	
-	public void enterFrameByXpath(String  locator) {
+
+	public void enterFrameByXpath(String locator) {
 		this.pause(3000);
 		driver.switchTo().frame(finder.findElementByPrefix(locator));
 		Log.info("Entered iframe " + locator);
 	}
+
 	public void leaveFrame() {
 		driver.switchTo().defaultContent();
 		Log.info("Left the iframe");
@@ -220,6 +205,7 @@ public class WebDriverEngine {
 		return alert;
 	}
 
+	// 下拉框选择
 	public Select getSelect(String locator) {
 		Select inputSelect = new Select(finder.findElement(locator));
 		return inputSelect;
@@ -258,40 +244,68 @@ public class WebDriverEngine {
 		j.executeScript(js);
 	}
 
+	public void runJs(String js, String locator) {
+		JavascriptExecutor j = (JavascriptExecutor) driver;
+		j.executeScript(js, finder.findElement(locator));
+	}
 
+	// 鼠标移动到某元素
 	public void mouseoverElement(String locator) throws InterruptedException {
 		Actions action = new Actions(driver);
 		action.moveToElement(finder.findElement(locator)).perform();
 	}
-	//切换窗口
-	public void switchWidow(int i){
-	    List<String> windows = new ArrayList<String>();
-	    for (String handle : driver.getWindowHandles()) {
-	    
-	    	windows.add(handle);
-	    }
-	    driver.switchTo().window(windows.get(i));
+
+	// 切换窗口
+	public void switchWidow(int i) {
+		List<String> windows = new ArrayList<String>();
+		for (String handle : driver.getWindowHandles()) {
+
+			windows.add(handle);
+		}
+		driver.switchTo().window(windows.get(i));
 	}
-	//右键
+
+	// 右键
 	public void rightClickMouse(String locator) throws InterruptedException {
 		action.contextClick(finder.findElement(locator)).perform();
-		}
-	//Tab键
-	public void tapClick(){
-	
-		action.sendKeys(Keys.TAB).perform();;
 	}
-	
-	public void tapType(String content){
-		
-			action.sendKeys(content).perform();
-		}
-	
-	public void getWindow(int i){
+
+	// Tab键
+	public void tapClick() {
+
+		action.sendKeys(Keys.TAB).perform();
+	}
+
+	// Down键
+	public void KeyDown() {
+
+		action.sendKeys(Keys.DOWN).perform();
+	}
+
+	// 右箭头
+	public void keyRight() {
+		action.sendKeys(Keys.RIGHT);
+	}
+
+	// 左箭头
+	public void keyLeft() {
+		action.sendKeys(Keys.LEFT);
+	}
+
+	// Enter键
+	public void KeyEnter() {
+		action.sendKeys(Keys.ENTER).perform();
+	}
+
+	public void tapType(String content) {
+
+		action.sendKeys(content).perform();
+	}
+
+	public void getWindow(int i) {
 		List<String> windows = new ArrayList<String>();
-		for (String handle : driver.getWindowHandles())
-		{
-			//System.out.println(handle);  //杩涘叆鍒扮浜屼釜椤甸潰
+		for (String handle : driver.getWindowHandles()) {
+			// System.out.println(handle); //杩涘叆鍒扮浜屼釜椤甸潰
 			windows.add(handle);
 		}
 		driver.switchTo().window(windows.get(i));
@@ -300,9 +314,5 @@ public class WebDriverEngine {
 	public boolean ifContains(String content) {
 		return driver.getPageSource().contains(content);
 	}
-	
 
-	
-	
-	
 }

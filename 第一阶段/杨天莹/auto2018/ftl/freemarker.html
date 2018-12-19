@@ -77,20 +77,20 @@
 本次共运行自动化case:${passedNum+failedNum}个，其中FAIL:${failedNum}个  
 <br/>
 <br/>
-	<table class="passedtable" width="500"> 
+	<table class="passedtable" width="800"> 
 		<tr >
 			<th colspan="3"> 
 				成功用例
 			</th>
 		</tr>
 		<tr>
-			<td> 
+			<td width="200"> 
 				生成时间：  ${curTime?datetime}
 			</td>
-			<td> 
+			<td width="500"> 
 				成功用例总数：  ${passedNum}
 			</td>
-			<td> 
+			<td width="100"> 
 				测试结论
 			</td>
 		</tr>
@@ -105,20 +105,20 @@
 	        
 		
 	<br>
-		<table class="failedtable" width="500"> 
+		<table class="failedtable" width="800"> 
 		<tr>
 			<th colspan="3"> 
 				失败用例
 			</th>
 		</tr>
 		<tr>
-			<td> 
+			<td width="200"> 
 				生成时间：  ${curTime?datetime}
 			</td>
-			<td> 
+			<td width="500"> 
 				失败用例总数：  ${failedNum}
 			</td>
-			<td> 
+			<td width="100"> 
 				测试结论
 			</td>
 			

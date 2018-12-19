@@ -12,9 +12,8 @@ import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
 
 /**
- * author:lihuanzhen ¼àÌıÆ÷£¬ÓÃÀıÊ§°Ü£¬½ØÆÁ
+ * @author ÑîÌìÓ¨ ¼àÌıÆ÷ ·¢ËÍÓÊ¼ş
  */
-
 public class WebTestListener extends TestListenerAdapter {
 
 	FreemakerTemplateEngine ft = new FreemakerTemplateEngine();
@@ -69,7 +68,6 @@ public class WebTestListener extends TestListenerAdapter {
 		try {
 			String content = ft.run(Result);
 			System.out.println("ÎÒµÄ²âÊÔ");
-
 			System.out.println(content);
 			mail.send(content);
 		} catch (IOException e) {

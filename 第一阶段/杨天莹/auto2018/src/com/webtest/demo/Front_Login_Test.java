@@ -2,32 +2,30 @@ package com.webtest.demo;
 
 import static org.testng.Assert.assertTrue;
 
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 
 public class Front_Login_Test extends BaseTest {
 
-	Login_Action action;
-
-	@BeforeMethod
-	public void setup() {
-		action = new Login_Action(webtest);
-	}
-
 	@Test
-	public void LoginSuccess() throws Exception {
+	public void testSearch() throws Exception {
 		webtest.open("http://localhost:8032/mymovie/");
-		action.login("qingdao02", "123456");
+		webtest.click("link=登录");
+		webtest.type("name=username", "qingdao01");
+		webtest.type("name=password", "123456");
+		webtest.click("xpath=//input[@value='马上登录']");
 		assertTrue(webtest.ifContains("退出"));
 
 	}
 
 	@Test
-	public void LoginFailed() throws Exception {
+	public void Failed() throws Exception {
 		webtest.open("http://localhost:8032/mymovie/");
-		action.login("qingdao01", "123");
+		webtest.click("link=登录");
+		webtest.type("name=username", "qingdao01");
+		webtest.type("name=password", "123");
+		webtest.click("xpath=//input[@value='马上登录']");
 		assertTrue(webtest.ifContains("退出"));
 
 	}
