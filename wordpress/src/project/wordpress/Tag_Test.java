@@ -71,7 +71,7 @@ public class Tag_Test extends BaseTest {
 		driver.findElement(By.xpath("//a[text()='标签']")).click();
 		Thread.sleep(1000);
 		webtest.mouseoverElement("xpath=//td[contains(.,'firstTag123firstTag123firsttag1230编辑 | 快速编辑 | 删除 | 查看显示详情')]");	
-		webtest.click("xpath=//a[contains(@aria-label,'删除“firstTag123”')]");
+		webtest.runJs("arguments[0].click();", "xpath=//a[contains(.,'删除')]");
 		Thread.sleep(1000);
 		//弹出窗口处理
 		webtest.alertAccept();

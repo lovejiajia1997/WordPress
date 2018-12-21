@@ -80,7 +80,8 @@ public class User_Test extends BaseTest{
 		webtest.click("xpath=//div[text()='用户']");
 		webtest.mouseoverElement("xpath=//a[text()='1234567']");
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//a[@class='submitdelete']")).click();
+		webtest.runJs("arguments[0].click();", "xpath=//a[contains(.,'删除')]");
 		webtest.click("id=submit");
+		Assert.assertTrue(ifContains("用户已删除"));
 	}
 }

@@ -107,7 +107,7 @@ public class Article_Test extends BaseTest {
 		
 		//点击回收站
 		webtest.mouseoverElement("xpath=//a[contains(.,'冬日告白')]");	
-		driver.findElement(By.xpath("//a[@aria-label='移动“冬日告白”到垃圾箱']")).click();
+		webtest.runJs("arguments[0].click();","xpath=//a[contains(.,'移至回收站')]");
 		Thread.sleep(1000);
 		
 		//断言

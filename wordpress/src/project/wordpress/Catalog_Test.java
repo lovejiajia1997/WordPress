@@ -104,9 +104,8 @@ public class Catalog_Test extends BaseTest{
 		//删除目录
 
 		webtest.mouseoverElement("xpath=//a[contains(.,'theolove')]");
-		driver.findElement(By.xpath("//a[@aria-label='删除“theolove”']")).click();
+		webtest.runJs("arguments[0].click();","xpath=//a[contains(.,'删除')]");
 		Thread.sleep(1000);	
-		
 		//在弹出对话框中选择确定（取消为dismiss）
 		webtest.alertAccept();	
 		
