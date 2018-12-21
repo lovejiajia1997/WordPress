@@ -1,7 +1,7 @@
 import unittest
 from api2018 import Common
 from api2018.Sendhttp import SendHttp
-
+#岳哲伟计算运费
 class getFee(unittest.TestCase):
     def setUp(self):
         self.url ="/common/getTransportFee"
