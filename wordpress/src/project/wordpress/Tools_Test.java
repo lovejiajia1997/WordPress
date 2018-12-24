@@ -3,7 +3,6 @@ package project.wordpress;
 import static org.testng.Assert.assertTrue;
 
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;

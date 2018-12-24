@@ -7,8 +7,6 @@ import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 
-import ludanqi123.Login_Action;
-
 /**
  * author:刘江
  * 创建页面
@@ -25,7 +23,7 @@ public class Pages_Test extends BaseTest{
 		action=new Login_Action(webtest);
 		//登录
 		webtest.open("http://localhost:8032/wordpress/wp-login.php");
-		action.login("admin", "admin");
+		action.login();
 		Thread.sleep(1000);
 	}
 	

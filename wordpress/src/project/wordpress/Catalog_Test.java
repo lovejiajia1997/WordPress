@@ -13,8 +13,6 @@ import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 
-import ludanqi123.Login_Action;
-
 public class Catalog_Test extends BaseTest{
 	
 	Login_Action action;
@@ -25,7 +23,7 @@ public class Catalog_Test extends BaseTest{
 		action=new Login_Action(webtest);
 		//µÇÂ¼
 		webtest.open("http://localhost:8032/wordpress/wp-login.php");
-		action.login("admin", "admin");
+		action.login();
 		Thread.sleep(1000);
 	}
 	

@@ -12,8 +12,6 @@ import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 
-import ludanqi123.Login_Action;
-
 /*
  * author:shisujia
  * 用户操作类
@@ -27,7 +25,7 @@ public class User_Test extends BaseTest{
 		action=new Login_Action(webtest);
 		//登录
 		webtest.open("http://localhost:8032/wordpress/wp-login.php");
-		action.login("admin", "admin");
+		action.login();
 		Thread.sleep(1000);
 	}
 	
