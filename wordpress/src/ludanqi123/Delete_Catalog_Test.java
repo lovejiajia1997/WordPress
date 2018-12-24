@@ -8,10 +8,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.ClickAction;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
+
+import project.wordpress.Login_Action;
 
 /**
  * 
@@ -25,16 +28,20 @@ public class Delete_Catalog_Test extends BaseTest{
 Login_Action action;
 	
 	@BeforeMethod
-	public void setup()
+	public void login() throws InterruptedException
 	{
 		action=new Login_Action(webtest);
+		//登录
+		webtest.open("http://localhost:8032/wordpress/wp-login.php");
+		action.login();
+		Thread.sleep(1000);
 	}
 
 	@Test
 	public void deleteCataLog() throws Exception  {	
 		//登录
 		webtest.open("http://localhost:8032/wordpress/wp-login.php");
-		action.login("admin", "admin");
+		action.login();
 		Thread.sleep(1000);
 		//鼠标移动语句只能使用driver
 		Actions actions = new Actions(driver);
